@@ -1,0 +1,138 @@
+DAY 05
+
+1.Print odd numbers in an array?
+code:
+
+ var a=[1,2,3,4.5,6,7,8,9,10];
+ var odd= function(arr){
+    var o = arr.filter((num)=>
+    {
+     return(num%2 !=0);
+    })
+    return o;
+    }
+    console.log(odd(a));
+
+2.Convert all the strings to title caps in a string array?
+code:
+
+  let str ="Hello I am a string.";
+  (function(s){
+    let arr=s.split(" ");
+    let str="";
+    for(let i in arr){
+    str +=arr[i].charAt(0).touppercase() + arr[i].slice(1) + " ";
+      }
+    console.log(str.trim());
+    })(str)
+
+
+3.Sum of all numbers in an array?
+ code:
+
+   var a=[1,2,3,4,5,6,7,8,9,10];
+   let sum = function(arr){
+   let s=arr.reduce((currentTotal,num)=> {
+    return currentTotal + num;
+    });
+     return s;
+    };
+   console.log(sum(a));
+
+
+4.Return all the prime numbers in an array?
+  code:
+
+   let arr = [1,2,3,4,5,6,7,8,9,10];
+   (function(arr) {
+    let str = "";
+    for(let i=0; i<arr.length;i++){
+     let isprime=true;
+     if(arr[i]>1){
+    for(let j=2;j<math.sqrt(arr[i]);j++){
+     if(arr[i]%j==0){
+      isprime=false;
+      break;
+     }
+   }
+    if(isprime){
+     str += arr[i] + " ";
+    }
+   }
+  }
+   console.log(str.trim());
+   })(arr)
+
+
+5.Return all the palindromes in an array?
+  code:
+
+ var s=["asa", "aaa", "qwe", "nonon", "oppo"]
+ var p=function(arr){
+  let res = new Array();
+  for(let k in arr){
+   let pal = true;
+  for(let i=0; j=arr[k].length-1; i<arr[k].length/2; i++,j--){
+    if (arr[k][i]!=arr[k][j])
+   {
+    pal = false;
+    break;
+     }
+    }
+   if (pal){
+   res.push(arr[k]);
+    }
+   }
+     return res;
+   }
+    console.log(p(S));
+
+
+6.Return median of two sorted arrays of same size?
+code:
+
+  var arr1=[1,2,3,4,5,50,100,120];
+  var arr2=[10,15,16,23,45,56,345];
+   let j=0, k=0;
+  let arr3=newArray();
+   for(let i=0; i<arr1.length + arr2.length; i++){
+   if(j==arr1.length){
+    arr3.push(arr2[k++]);
+   }
+  else if(k==arr2.length){
+   arr3.push(arr1[j++]);
+   }
+   else if(arr1[j]<=arr2[k])
+   {
+   arr3.push(arr1[j++]);
+    }
+   else{
+    arr3.push(arr2[k++]);
+   }
+  }
+  console.log(arr3[math.floor()arr1.length+arr2.length/2)]);
+
+
+7.Remove duplicates from an array?
+code:
+
+  let arr = [1,1,1,2,3,4,44,4,55,55,5,5,55,5,6];
+  let map = new Array();
+  let len = arr.length;
+  for(let i=0; i<len; i++){
+   if(!(map.includes(arr[i]))){
+    map.push(arr[i]);
+    }
+   console.log(map);
+
+
+8.Rotate an array by k times?
+code:
+
+ var arr = [1,2,3,4,5,6,7,8];
+  let k=4;
+  for(let i=0; i<k; i++){
+   arr.splice(0,0,arr[arr.length-1]);
+   arr.splice(arr.length-1,1);
+   }
+   console.log(arr);
